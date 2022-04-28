@@ -12,7 +12,7 @@ public class ListTest {
     @Test
     public void testMockDelMetodoSizeDiList_DimensioneListaMaggioreDi0(){
 
-        List listMock = mock(List.class);
+        List<String> listMock = mock(List.class);
         when(listMock.size()).thenReturn(2);
 
         assertEquals(2,listMock.size());
@@ -21,7 +21,7 @@ public class ListTest {
     @Test
     public void testMockDelMetodoSizeDiList_RitornaValoriMultipli(){
 
-        List listMock = mock(List.class);
+        List<String> listMock = mock(List.class);
         when(listMock.size()).thenReturn(2).thenReturn(3);
 
         assertEquals(2,listMock.size());
@@ -31,7 +31,7 @@ public class ListTest {
     @Test
     public void testMockDelMetodoGetDiList_DimensioneListaMaggioreDi0(){
 
-        List listMock = mock(List.class);
+        List<String> listMock = mock(List.class);
         when(listMock.get(0)).thenReturn("Corso Mockito");
 
         assertEquals("Corso Mockito",listMock.get(0));
@@ -41,7 +41,7 @@ public class ListTest {
     @Test
     public void testMockDelMetodoGetDiList_ArgumentMatcher(){
 
-        List listMock = mock(List.class);
+        List<String> listMock = mock(List.class);
 
         /* Argument matcher*/
         when(listMock.get(anyInt())).thenReturn("Corso Mockito");
@@ -53,11 +53,12 @@ public class ListTest {
     @Test(expected = RuntimeException.class)
     public void testMockDelMetodoGetDiList_GeneroEccezione(){
 
-        List listMock = mock(List.class);
+        List<String> listMock = mock(List.class);
 
         /* Argument matcher*/
         when(listMock.get(anyInt())).thenThrow(new RuntimeException());
 
-        listMock.get(0);
+        String primoElemento = listMock.get(0);
     }// Success
+
 }
