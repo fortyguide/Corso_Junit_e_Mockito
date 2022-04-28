@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PrimoUnitTestTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2022-04-27T12:52:54" hostname="STEPAN-PORT" time="0.017">
+<testsuite name="PrimoUnitTestTest" tests="3" skipped="0" failures="1" errors="0" timestamp="2022-04-28T06:34:57" hostname="STEPAN-PORT" time="0.019">
   <properties/>
-  <testcase name="testTroncoLetteraANellePrimeDuePosizioni_TroncaturaDaEseguireStringaAACD()" classname="PrimoUnitTestTest" time="0.012"/>
-  <testcase name="testTroncoLetteraANellePrimeDuePosizioni_TroncaturaDaNonEseguireStringaACDB()" classname="PrimoUnitTestTest" time="0.003">
+  <testcase name="testTroncoLetteraANellePrimeDuePosizioni_TroncaturaDaEseguireStringaAACD()" classname="PrimoUnitTestTest" time="0.015"/>
+  <testcase name="testTroncoLetteraANellePrimeDuePosizioni_TroncaturaDaNonEseguireStringaACDB()" classname="PrimoUnitTestTest" time="0.002">
     <failure message="org.opentest4j.AssertionFailedError: expected: &lt;ACDB&gt; but was: &lt;CDB&gt;" type="org.opentest4j.AssertionFailedError">org.opentest4j.AssertionFailedError: expected: &lt;ACDB&gt; but was: &lt;CDB&gt;
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
