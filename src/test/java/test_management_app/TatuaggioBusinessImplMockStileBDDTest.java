@@ -184,7 +184,7 @@ public class TatuaggioBusinessImplMockStileBDDTest {
         then(servizioTatuaggioMock).should().cancellaTatuaggio(stringArgumentCaptor.capture());
         assertThat(stringArgumentCaptor.getAllValues().size(), is(1));
 
-    }
+    }//Success
 
 }
 
