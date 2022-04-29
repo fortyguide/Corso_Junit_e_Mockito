@@ -5,8 +5,8 @@ import management_app.tatuaggio_business_implementazione.TatuaggioBusinessImpl;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;
-import static org.mockito.Mockito.mock;
 import static org.hamcrest.CoreMatchers.*;
+import static org.mockito.Mockito.*;
 
 import java.util.Arrays;
 import java.util.List;
@@ -59,6 +59,37 @@ public class TatuaggioBusinessImplMockStileBDDTest {
         /*assertEquals(0, tatuaggiFiltrati.size());
          * lo sostituisco con la seguente sintassi: */
         assertThat(tatuaggiFiltrati.size(), is(0));
+    }
+
+    @Test
+    public void testRecuperoTatuaggiNonRelativiAllaPrimavera_StileBDD(){
+
+        /* Given - Configurazione scenario */
+        ServizioTatuaggio servizioTatuaggioMock = mock(ServizioTatuaggio.class);
+
+        List<String> tatuaggi = Arrays.asList("Imparare di primavera in paese",
+                                              "Maledetta primavera",
+                                              "Il mare d'estate");
+
+        given(servizioTatuaggioMock.recuperoTatuaggi("Paolo")).willReturn(tatuaggi);
+
+        TatuaggioBusinessImpl tatuaggioBusinessImpl = new TatuaggioBusinessImpl(servizioTatuaggioMock);
+
+        /* When - Azione da eseguire */
+        tatuaggioBusinessImpl.recuperoTatuaggiNonRelativiAllaPrimavera("Paolo");;
+
+        /* Then - Verifica Azione */
+
+        /* Verifico che il parametro d'ingresso di cancellaTatuaggio() sia
+        * una stringa senza la sottostringa "primavera" */
+        verify(servizioTatuaggioMock).cancellaTatuaggio("Il mare d'estate");
+
+        /* Aggiungendo never() a verify(), verifichiamo che quelle chiamate
+        * al metodo cancellaTatuaggio(), che presentano la sottostringa "primavera",
+        * non avvengano mai*/
+        verify(servizioTatuaggioMock, never()).cancellaTatuaggio("Imparare di primavera in paese");
+        verify(servizioTatuaggioMock, never()).cancellaTatuaggio("Maledetta primavera");
+
     }
 
 }

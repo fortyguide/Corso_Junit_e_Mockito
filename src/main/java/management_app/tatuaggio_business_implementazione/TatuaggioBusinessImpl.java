@@ -28,4 +28,15 @@ public class TatuaggioBusinessImpl {
         return tatuaggiFiltrati;
     }
 
+    public void recuperoTatuaggiNonRelativiAllaPrimavera (String utente){
+
+        List<String> tatuaggi = servizioTatuaggio.recuperoTatuaggi(utente);
+
+        for(String tatuaggio : tatuaggi){
+            if(!tatuaggio.contains("primavera")){
+                servizioTatuaggio.cancellaTatuaggio(tatuaggio);
+            }
+        }
+    }
+
 }

@@ -5,4 +5,6 @@ import java.util.List;
 public interface ServizioTatuaggio {
 
     public List<String> recuperoTatuaggi(String utente);
+
+    public void cancellaTatuaggio(String tatuaggio);
 }
