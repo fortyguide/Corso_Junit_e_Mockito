@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SecondoUnitClassTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-04-28T06:34:57" hostname="STEPAN-PORT" time="0.003">
+<testsuite name="SecondoUnitClassTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-05-02T07:08:13" hostname="STEPAN-PORT" time="0.004">
   <properties/>
   <testcase name="testVerificoCheIPrimiEGliUltimiDueCaratteriSonoGliStessi_UnSoloCarattere()" classname="SecondoUnitClassTest" time="0.001"/>
   <testcase name="testVerificoCheIPrimiEGliUltimiDueCaratteriSonoGliStessi_Primi2CaratteriEUltimi2CaratteriSonoDiversi()" classname="SecondoUnitClassTest" time="0.001"/>
   <testcase name="testVerificoCheIPrimiEGliUltimiDueCaratteriSonoGliStessi_Primi2CaratteriSonoAncheGliUltimi2()" classname="SecondoUnitClassTest" time="0.001"/>
-  <testcase name="testVerificoCheIPrimiEGliUltimiDueCaratteriSonoGliStessi_Primi2CaratteriEUltimi2CaratteriSonoUguali()" classname="SecondoUnitClassTest" time="0.0"/>
+  <testcase name="testVerificoCheIPrimiEGliUltimiDueCaratteriSonoGliStessi_Primi2CaratteriEUltimi2CaratteriSonoUguali()" classname="SecondoUnitClassTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
