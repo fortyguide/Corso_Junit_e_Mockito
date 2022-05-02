@@ -2,13 +2,16 @@ package test_management_app;
 
 import management_app.servizio_tatuaggi.ServizioTatuaggio;
 import management_app.tatuaggio_business_implementazione.TatuaggioBusinessImpl;
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.junit.MockitoRule;
 
 import static org.junit.Assert.*;
 import static org.mockito.BDDMockito.given;
@@ -20,8 +23,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /* Indispensabile per poter utilizzare @Mock @InjectMocks e @Captor */
-@RunWith(MockitoJUnitRunner.class)
+/* @RunWith(MockitoJUnitRunner.class) */
 public class TatuaggioBusinessImplMockStileBDDConAnnotationTest {
+
+    /*Corrisponde a:
+    * @RunWith(MockitoJUnitRunner.class) */
+    @Rule
+    public MockitoRule mockitoRule = MockitoJUnit.rule();
 
     /* Corrisponde a:
     ServizioTatuaggio servizioTatuaggioMock = mock(ServizioTatuaggio.class); */
